@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FYP - Ego-Motion Cancellation in Vibration-Based Mechanosensors</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Final Year Project Portfolio - Cancellation of self-sensing due to ego-motion of vibration based mechanosensors">
+    <meta name="keywords" content="mechanosensor, robotic antenna, ego-motion, accelerometer, FYP, bio-inspired">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Space+Grotesk:wght@600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Style -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- ======== NAVBAR ======== -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+                <h1 class="mb-0 text-primary" style="font-size:1.4rem; letter-spacing:1px;">
+                    <i class="fas fa-robot me-2"></i>MechanoFYP
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto p-4 p-lg-0">
+                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#project" class="nav-item nav-link">Project</a>
+                    <a href="#timeline" class="nav-item nav-link">Timeline</a>
+                    <a href="#deliverables" class="nav-item nav-link">Deliverables</a>
+                    <a href="#activities" class="nav-item nav-link">Activities</a>
+                    <a href="#updates" class="nav-item nav-link">Weekly Updates</a>
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                </div>
+                <a class="btn btn-primary d-none d-lg-flex me-4" href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank">
+                    <i class="fab fa-github me-2"></i>GitHub
+                </a>
+            </div>
+        </nav>
+
+        <!-- ======== HERO CAROUSEL ======== -->
+        <div id="home" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div style="height:100vh; background: linear-gradient(135deg, #0d1b2a 0%, #0a3d6e 50%, #0a6ebd 100%);"></div>
+                    <div class="carousel-caption">
+                        <div class="row h-100 align-items-center justify-content-center">
+                            <div class="col-11 col-md-9">
+                                <span class="badge bg-primary mb-3 px-3 py-2 fs-6">Final Year Project</span>
+                                <h1 class="display-4 text-white animated slideInDown mb-3">
+                                    Cancellation of Self-Sensing Due to Ego-Motion
+                                </h1>
+                                <p class="fs-5 mb-4 text-white-50 animated slideInDown">
+                                    Vibration-Based Mechanosensors for Robotic Antenna Contact Detection
+                                </p>
+                                <div class="d-flex gap-3 justify-content-center animated slideInDown flex-wrap">
+                                    <a href="#project" class="btn btn-primary py-3 px-4">
+                                        <i class="fas fa-flask me-2"></i>Explore Project
+                                    </a>
+                                    <a href="#updates" class="btn btn-outline-light py-3 px-4">
+                                        <i class="fas fa-calendar-alt me-2"></i>Weekly Updates
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div style="height:100vh; background: linear-gradient(135deg, #0d1b2a 0%, #17a589 50%, #00c6a2 100%);"></div>
+                    <div class="carousel-caption">
+                        <div class="row h-100 align-items-center justify-content-center">
+                            <div class="col-11 col-md-9">
+                                <span class="badge bg-success mb-3 px-3 py-2 fs-6">Bio-Inspired Robotics</span>
+                                <h1 class="display-4 text-white animated slideInDown mb-3">
+                                    Insect-Inspired Robotic Antenna System
+                                </h1>
+                                <p class="fs-5 mb-4 text-white-50 animated slideInDown">
+                                    Accelerometer-Based Contact Detection with Pan-Tilt Integration on Mobile Robot
+                                </p>
+                                <div class="d-flex gap-3 justify-content-center animated slideInDown flex-wrap">
+                                    <a href="#timeline" class="btn btn-primary py-3 px-4">
+                                        <i class="fas fa-tasks me-2"></i>View Timeline
+                                    </a>
+                                    <a href="#deliverables" class="btn btn-outline-light py-3 px-4">
+                                        <i class="fas fa-file-alt me-2"></i>Deliverables
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target=".carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target=".carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- ======== PROJECT OVERVIEW ======== -->
+    <div id="project" class="container-fluid py-6">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="about-img" style="background: linear-gradient(135deg, #0a6ebd, #00c6a2); border-radius:16px; height:400px; display:flex; align-items:center; justify-content:center;">
+                        <div class="text-center text-white p-4">
+                            <i class="fas fa-robot" style="font-size:5rem; opacity:0.8;"></i>
+                            <h4 class="mt-3 mb-2">Robotic Antenna System</h4>
+                            <p class="opacity-75 small">Vibration-Based Mechanosensor<br>with Accelerometer Tip</p>
+                        </div>
+                    </div>
+                    <!-- Replace the div above with: <img class="w-100" src="img/robot-antenna.jpg" style="border-radius:16px;" alt="Robotic Antenna"> -->
+                </div>
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                    <span class="section-label">Project Overview</span>
+                    <h2 class="section-title mb-3">Ego-Motion Cancellation in Vibration-Based Mechanosensors</h2>
+                    <p class="mb-3" style="color:#555; line-height:1.8;">
+                        In this project, a <strong>vibration-based artificial robotic antenna</strong> (feeler) — inspired by insect antennae — is constructed using an <strong>accelerometer mounted on the tip of a plastic tube</strong>. This antenna is used for detecting contacts with surrounding objects.
+                    </p>
+                    <p class="mb-4" style="color:#555; line-height:1.8;">
+                        The antenna is mounted on a <strong>Pan-Tilt unit</strong>, which is then attached to a <strong>mobile robot platform</strong>. The key challenge with this type of mechanosensor is <em>self-sensing due to ego-motion</em> — vibrations caused by the robot's own movement interfere with contact detection. This project aims to <strong>cancel the effects of ego-motion</strong> using a <strong>bio-inspired algorithm</strong>.
+                    </p>
+                    <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-check-circle text-primary fs-5"></i>
+                                <span>Accelerometer-based sensing</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-check-circle text-primary fs-5"></i>
+                                <span>Pan-Tilt unit integration</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-check-circle text-primary fs-5"></i>
+                                <span>Bio-inspired algorithm</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fas fa-check-circle text-primary fs-5"></i>
+                                <span>Mobile robot deployment</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="#timeline" class="btn btn-primary px-4">
+                            <i class="fas fa-calendar me-2"></i>View Timeline
+                        </a>
+                        <a href="#deliverables" class="btn btn-outline-primary px-4">
+                            <i class="fas fa-file me-2"></i>Deliverables
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== STATS ======== -->
+    <div class="container-fluid fact-counter py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon"><i class="fas fa-calendar-week"></i></div>
+                        <h1 class="display-5 text-white fw-bold">14</h1>
+                        <h5 class="text-white-50 mb-0">Weeks Duration</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon"><i class="fas fa-tasks"></i></div>
+                        <h1 class="display-5 text-white fw-bold">8</h1>
+                        <h5 class="text-white-50 mb-0">Key Activities</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon"><i class="fas fa-flag-checkered"></i></div>
+                        <h1 class="display-5 text-white fw-bold">7</h1>
+                        <h5 class="text-white-50 mb-0">Deliverables</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon"><i class="fas fa-microchip"></i></div>
+                        <h1 class="display-5 text-white fw-bold">1</h1>
+                        <h5 class="text-white-50 mb-0">Working Prototype</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== TIMELINE ======== -->
+    <div id="timeline" class="container-fluid py-6 milestone-section">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width:650px;">
+                <span class="section-label">Project Plan</span>
+                <h2 class="section-title mb-2">14-Week Project Timeline</h2>
+                <p class="text-muted mb-5">Activities planned for the full semester with week-by-week breakdown.</p>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.1s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 1–2</span>
+                        <h6>Literature Review</h6>
+                        <p>Study existing research on mechanosensors, robotic antennae, ego-motion cancellation, and bio-inspired sensing algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.2s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 3</span>
+                        <h6>Component Research &amp; Acquisition</h6>
+                        <p>Identify and procure hardware: accelerometer, plastic tube, Pan-Tilt unit, mobile platform, and supporting electronics.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.3s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 4–5</span>
+                        <h6>Hardware Design &amp; Schematic Drafting</h6>
+                        <p>Design the PCB schematics, circuit diagrams, and hardware layout for the antenna sensing system.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.4s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 6–9</span>
+                        <h6>Coding &amp; Logic Framework Development</h6>
+                        <p>Develop the initial coding framework and bio-inspired algorithm for ego-motion cancellation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.5s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 7–9</span>
+                        <h6>Hardware Assembly &amp; Integration</h6>
+                        <p>Assemble the Mechanosensor prototype — mount accelerometer on tip of antenna tube and integrate with Pan-Tilt unit on mobile robot.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.6s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 10–11</span>
+                        <h6>Hardware Calibration</h6>
+                        <p>Calibrate the sensor system, measure sensitivity, and validate the hardware response under controlled conditions.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.7s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 11–12</span>
+                        <h6>Offline Data Testing &amp; Model Training</h6>
+                        <p>Collect data sets, perform offline analysis, and train the ego-motion cancellation model using bio-inspired algorithm.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item wow fadeIn" data-wow-delay="0.8s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-week">Week 13–14</span>
+                        <h6>Performance Evaluation &amp; Refinement</h6>
+                        <p>Final testing, performance evaluation, results analysis, and refinement of the complete system.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== DELIVERABLES ======== -->
+    <div id="deliverables" class="container-fluid py-6">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width:650px;">
+                <span class="section-label">Project Deliverables</span>
+                <h2 class="section-title mb-2">What Will Be Delivered</h2>
+                <p class="text-muted mb-5">Numbered deliverables with expected submission timeline.</p>
+            </div>
+            <div class="row g-4">
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">01</div>
+                        <h5><i class="fas fa-book-open text-primary me-2"></i>Literature Review Summary</h5>
+                        <p class="small text-muted">Comprehensive review of existing work on mechanosensors, robotic antennae, and ego-motion cancellation techniques.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 3</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">02</div>
+                        <h5><i class="fas fa-list-alt text-primary me-2"></i>Hardware Components &amp; Procurement List</h5>
+                        <p class="small text-muted">Detailed list of all hardware components required, with sources, specifications, and procurement status.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 4</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">03</div>
+                        <h5><i class="fas fa-drafting-compass text-primary me-2"></i>PCB Schematics &amp; Design Files</h5>
+                        <p class="small text-muted">Complete PCB design files including schematics, layout, and fabrication-ready documents for the sensor circuit.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 6</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">04</div>
+                        <h5><i class="fas fa-code text-primary me-2"></i>Initial Coding Framework</h5>
+                        <p class="small text-muted">Core software framework implementing the bio-inspired algorithm structure for ego-motion cancellation.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 9</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">05</div>
+                        <h5><i class="fas fa-microchip text-primary me-2"></i>Assembled Mechanosensor Prototype</h5>
+                        <p class="small text-muted">Fully assembled and functional robotic antenna prototype with accelerometer, mounted on Pan-Tilt unit and mobile robot.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 10</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">06</div>
+                        <h5><i class="fas fa-chart-line text-primary me-2"></i>Calibration &amp; Sensitivity Report</h5>
+                        <p class="small text-muted">Detailed analysis of sensor calibration results, sensitivity measurements, and hardware validation outcomes.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 11</span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="deliverable-card">
+                        <div class="deliverable-number">07</div>
+                        <h5><i class="fas fa-file-alt text-primary me-2"></i>Offline Testing Analysis Report</h5>
+                        <p class="small text-muted">Final comprehensive report on offline data testing, model training results, and ego-motion cancellation performance evaluation.</p>
+                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 14</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== ACTIVITIES ======== -->
+    <div id="activities" class="container-fluid py-6 bg-light">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <span class="section-label">Activities &amp; Plan</span>
+                    <h2 class="section-title mb-3">Planned Activities</h2>
+                    <p class="text-muted mb-4">All 8 key activities planned for the 14-week semester with their respective timelines and objectives.</p>
+                    <!-- Technology stack -->
+                    <h5 class="fw-bold mb-3">Technology Stack</h5>
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="tech-card">
+                                <span class="tech-icon"><i class="fas fa-microchip"></i></span>
+                                <h6>Accelerometer</h6>
+                                <small>MEMS Vibration Sensor</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-card">
+                                <span class="tech-icon"><i class="fas fa-code"></i></span>
+                                <h6>Python / MATLAB</h6>
+                                <small>Algorithm Development</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-card">
+                                <span class="tech-icon"><i class="fas fa-robot"></i></span>
+                                <h6>ROS</h6>
+                                <small>Robot OS Framework</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="tech-card">
+                                <span class="tech-icon"><i class="fas fa-drafting-compass"></i></span>
+                                <h6>KiCad / Eagle</h6>
+                                <small>PCB Design</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-search"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">1. Literature Review</h6>
+                            <p class="small text-muted mb-1">Research existing mechanosensor technology, bio-inspired algorithms, and ego-motion cancellation methods.</p>
+                            <span class="activity-weeks">Week 1–2</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-shopping-cart"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">2. Component Research &amp; Acquisition</h6>
+                            <p class="small text-muted mb-1">Source and procure all hardware components needed for the prototype build.</p>
+                            <span class="activity-weeks">Week 3</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-drafting-compass"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">3. Hardware Design &amp; Schematic Drafting</h6>
+                            <p class="small text-muted mb-1">Design PCB schematics and hardware layout for the sensor interface circuit.</p>
+                            <span class="activity-weeks">Week 4–5</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">4. Coding &amp; Logic Framework Development</h6>
+                            <p class="small text-muted mb-1">Implement the bio-inspired algorithm and signal processing pipeline for ego-motion cancellation.</p>
+                            <span class="activity-weeks">Week 6–9</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-tools"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">5. Hardware Assembly &amp; Integration</h6>
+                            <p class="small text-muted mb-1">Build and integrate the antenna prototype with Pan-Tilt unit and mobile robot platform.</p>
+                            <span class="activity-weeks">Week 7–9</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-sliders-h"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">6. Hardware Calibration</h6>
+                            <p class="small text-muted mb-1">Calibrate the complete sensor system and validate sensitivity under controlled conditions.</p>
+                            <span class="activity-weeks">Week 10–11</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">7. Offline Data Testing &amp; Model Training</h6>
+                            <p class="small text-muted mb-1">Collect data, train the cancellation model, and perform offline evaluation.</p>
+                            <span class="activity-weeks">Week 11–12</span>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-1">8. Performance Evaluation &amp; Refinement</h6>
+                            <p class="small text-muted mb-1">Final system performance testing, analysis, documentation, and refinement.</p>
+                            <span class="activity-weeks">Week 13–14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== WEEKLY UPDATES ======== -->
+    <div id="updates" class="container-fluid py-6">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width:650px;">
+                <span class="section-label">Progress Log</span>
+                <h2 class="section-title mb-2">Weekly Updates</h2>
+                <p class="text-muted mb-4">Live progress log — updated each week throughout the 14-week project.</p>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="d-flex justify-content-center gap-2 mb-5 flex-wrap">
+                <button class="btn btn-primary filter-btn active" data-filter="all">All Weeks</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="completed">Completed</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="inprogress">In Progress</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="upcoming">Upcoming</button>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- WEEK 1 -->
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.1s" data-status="completed">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="week-badge">Week 1</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Literature Review — Part 1</h6>
+                            <p>Initial literature search on robotic antennae and vibration-based mechanosensors. Review of insect-inspired sensing mechanisms.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WEEK 2 -->
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.2s" data-status="completed">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="week-badge">Week 2</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Literature Review — Part 2</h6>
+                            <p>Deep dive into ego-motion cancellation techniques and bio-inspired algorithms. Summary document drafted.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WEEK 3 -->
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.3s" data-status="inprogress">
+                    <div class="update-card">
+                        <div class="update-header">
+                            <span class="week-badge">Week 3</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Component Research &amp; Acquisition</h6>
+                            <p>Identified accelerometer model and Pan-Tilt servo unit. Procurement list finalized. Orders placed for key components.</p>
+                            <span class="update-status status-inprogress"><i class="fas fa-spinner me-1"></i>In Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WEEKS 4–14: Upcoming -->
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.4s" data-status="upcoming">
+                    <div class="update-card">
+                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                            <span class="week-badge">Week 4</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Hardware Design Begins</h6>
+                            <p>Start PCB schematic drafting and hardware layout planning for the sensor interface board.</p>
+                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.5s" data-status="upcoming">
+                    <div class="update-card">
+                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                            <span class="week-badge">Week 5</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Schematic Completion</h6>
+                            <p>Complete PCB schematics and begin design file preparation for fabrication.</p>
+                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.6s" data-status="upcoming">
+                    <div class="update-card">
+                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                            <span class="week-badge">Week 6</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Coding Framework Start</h6>
+                            <p>Begin implementing the signal processing and bio-inspired cancellation algorithm code.</p>
+                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.1s" data-status="upcoming">
+                    <div class="update-card">
+                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                            <span class="week-badge">Week 7</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Coding + Hardware Assembly</h6>
+                            <p>Parallel progress: continue coding framework while starting hardware assembly of antenna prototype.</p>
+                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.2s" data-status="upcoming">
+                    <div class="update-card">
+                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                            <span class="week-badge">Week 8</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Integration Progress</h6>
+                            <p>Mount accelerometer on antenna tip. Begin integration with Pan-Tilt unit. Update to this section coming soon.</p>
+                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.3s" data-status="upcoming">
+                    <div class="update-card">
+                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                            <span class="week-badge">Weeks 9–14</span>
+                            <span class="date-badge">Date: TBD</span>
+                        </div>
+                        <div class="update-body">
+                            <h6>Assembly → Calibration → Testing → Evaluation</h6>
+                            <p>Remaining weeks: complete prototype, calibrate sensors, run offline testing, train model, and evaluate final performance.</p>
+                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== CONTACT ======== -->
+    <div id="contact" class="container-fluid bg-light overflow-hidden px-lg-0">
+        <div class="container py-6 px-lg-0">
+            <div class="row g-5">
+                <div class="col-lg-7 wow fadeIn" data-wow-delay="0.1s">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title mb-4">Get In Touch</h2>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-user"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-0">Student</h6>
+                            <p class="mb-0 text-muted">Your Full Name — Reg. No: XXXXXXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-0">Supervisor</h6>
+                            <p class="mb-0 text-muted">Supervisor Name — Department of XXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-university"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-0">University</h6>
+                            <p class="mb-0 text-muted">University of Peradeniya / Your University</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-0">Email</h6>
+                            <p class="mb-0 text-muted">your.email@university.ac.lk</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fab fa-github"></i></div>
+                        <div>
+                            <h6 class="fw-bold mb-0">GitHub Repository</h6>
+                            <p class="mb-0"><a href="https://github.com/YOUR_USERNAME/YOUR_REPO" class="text-primary" target="_blank">github.com/YOUR_USERNAME/YOUR_REPO</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="supervisor-card">
+                        <div style="width:100px;height:100px;background:linear-gradient(135deg,#0a6ebd,#00c6a2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem; font-size:2.5rem;color:#fff;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h5>Supervisor Name</h5>
+                        <p>Department of Electrical &amp; Electronic Engineering</p>
+                        <p>University of Peradeniya</p>
+                        <a href="mailto:supervisor@pdn.ac.lk" class="btn btn-primary mt-3 px-4">
+                            <i class="fas fa-envelope me-2"></i>Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== FOOTER ======== -->
+    <div class="container-fluid footer pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-white mb-4"><i class="fas fa-robot me-2 text-primary"></i>MechanoFYP</h4>
+                    <p class="text-white-50">Final Year Project — Cancellation of Self-Sensing Due to Ego-Motion of Vibration-Based Mechanosensors. Department of Engineering, 2024/2025.</p>
+                    <div class="d-flex pt-2 gap-2">
+                        <a class="btn btn-square btn-primary" href="https://github.com/YOUR_USERNAME/YOUR_REPO" target="_blank"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-square btn-primary" href="mailto:your.email@university.ac.lk"><i class="fas fa-envelope"></i></a>
+                        <a class="btn btn-square btn-primary" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="text-white mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="#project">Project Overview</a>
+                    <a class="btn btn-link" href="#timeline">Timeline</a>
+                    <a class="btn btn-link" href="#deliverables">Deliverables</a>
+                    <a class="btn btn-link" href="#activities">Activities</a>
+                    <a class="btn btn-link" href="#updates">Weekly Updates</a>
+                    <a class="btn btn-link" href="#contact">Contact</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Deliverables</h4>
+                    <a class="btn btn-link" href="#">Literature Review (Week 3)</a>
+                    <a class="btn btn-link" href="#">PCB Schematics (Week 6)</a>
+                    <a class="btn btn-link" href="#">Prototype (Week 10)</a>
+                    <a class="btn btn-link" href="#">Testing Report (Week 14)</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-4">Project Status</h4>
+                    <div class="mb-3">
+                        <div class="progress-label"><small class="text-white-50">Overall Progress</small><small class="text-white-50">~20%</small></div>
+                        <div class="progress"><div class="progress-bar" style="width: 20%" role="progressbar"></div></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="progress-label"><small class="text-white-50">Literature Review</small><small class="text-white-50">100%</small></div>
+                        <div class="progress"><div class="progress-bar" style="width: 100%" role="progressbar"></div></div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="progress-label"><small class="text-white-50">Hardware Design</small><small class="text-white-50">0%</small></div>
+                        <div class="progress"><div class="progress-bar" style="width: 0%" role="progressbar"></div></div>
+                    </div>
+                    <div>
+                        <div class="progress-label"><small class="text-white-50">Software Dev</small><small class="text-white-50">0%</small></div>
+                        <div class="progress"><div class="progress-bar" style="width: 0%" role="progressbar"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">MechanoFYP</a> 2024/2025 — Final Year Project
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Template adapted from <a href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top btn btn-primary"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
