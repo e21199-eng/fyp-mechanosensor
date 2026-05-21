@@ -413,19 +413,128 @@
             <div class="row g-4">
 
                 <!-- WEEK 1 -->
+                <!-- WEEK 1 -->
                 <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.1s" data-status="completed">
-                    <div class="update-card">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week1-detail')">
                         <div class="update-header">
                             <span class="week-badge">Week 1</span>
-                            <span class="date-badge">Date: TBD</span>
+                                <span class="date-badge">📅 Date: TBD</span>
                         </div>
                         <div class="update-body">
-                            <h6>Literature Review — Part 1</h6>
-                            <p>Initial literature search on robotic antennae and vibration-based mechanosensors. Review of insect-inspired sensing mechanisms.</p>
+                            <h6>Project Kickoff &amp; Literature Review</h6>
+                            <p>Met with supervisors, defined project scope, created the 14-week timeline and plan, and studied 3 key research papers directly related to this project.</p>
                             <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                     <i class="fas fa-chevron-down me-1"></i>Click to see details &amp; papers
+                                </small>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+                        <!-- ===== EXPANDED DETAIL PANEL ===== -->
+                        <div id="week1-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+
+                            <!-- What we did -->
+                            <p style="font-size:0.82rem; font-weight:700; color:#0a6ebd; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-clipboard-check me-1"></i>What We Did This Week
+                            </p>
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin-bottom:1rem; line-height:1.7;">
+                                <li>Met with Dr. Harischandra &amp; Dr. Samaranayake to discuss project scope and direction</li>
+                                <li>Created the 14-week project plan and timeline</li>
+                                <li>Identified deliverables and milestones for the semester</li>
+                                <li>Studied 3 supervisor-published research papers directly related to this project</li>
+                                <li>Understood the core problem: cancellation of ego-motion in vibration-based mechanosensors</li>
+                            </ul>
+
+                            <!-- Paper 1 -->
+                            <div style="background:#fff; border:1px solid #dee2e6; border-left:3px solid #0a6ebd; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+                                 <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                                     <i class="fas fa-file-pdf" style="color:#e74c3c; font-size:1.1rem; margin-top:2px; flex-shrink:0;"></i>
+                                     <div>
+                                         <p style="font-size:0.8rem; font-weight:700; color:#222; margin:0 0 2px;">
+                                             Harischandra &amp; Dürr (2012) — IEEE ROSE
+                                         </p>
+                                         <p style="font-size:0.75rem; color:#888; margin:0; font-style:italic;">
+                                             "A Forward Model for an Active Tactile Sensor Using Echo State Networks"
+                                         </p>
+                                     </div>
+                                 </div>
+                                 <ul style="font-size:0.78rem; color:#555; padding-left:1rem; margin:6px 0; line-height:1.6;">
+                                     <li><strong>Objective:</strong> Predict expected sensor reading of robotic antenna to cancel ego-motion</li>
+                                     <li><strong>Method:</strong> Echo State Network (ESN) — a recurrent neural network for chaotic time series</li>
+                                     <li><strong>Setup:</strong> Accelerometer on antenna tip + accelerometer on robot platform + servo position</li>
+                                     <li><strong>Key result:</strong> Successfully detected 34 true touch events from 35 disturbances with 100% accuracy</li>
+                                     <li><strong>Relevance:</strong> This is the core bio-inspired algorithm our project builds upon</li>
+                                 </ul>
+                                 <a href="docs/HarischandraN_etal_2012.pdf" target="_blank"
+                                     style="display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; color:#0a6ebd; text-decoration:none; font-weight:600; margin-top:4px;"
+                                     onmouseover="this.style.textDecoration='underline'"
+                                     onmouseout="this.style.textDecoration='none'">
+                                     <i class="fas fa-download" style="font-size:0.7rem;"></i> Open PDF
+                                 </a>
+                             </div>
+
+                             <!-- Paper 2 -->
+                             <div style="background:#fff; border:1px solid #dee2e6; border-left:3px solid #17a589; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+                                 <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                                     <i class="fas fa-file-pdf" style="color:#e74c3c; font-size:1.1rem; margin-top:2px; flex-shrink:0;"></i>
+                                     <div>
+                                         <p style="font-size:0.8rem; font-weight:700; color:#222; margin:0 0 2px;">
+                                              Harischandra &amp; Dürr (2013) — BICS Conference
+                                         </p>
+                                         <p style="font-size:0.75rem; color:#888; margin:0; font-style:italic;">
+                                             "Prediction of Self-induced Mechanoreceptive Sensor Readings in an Insect-inspired Active Tactile Sensing System"
+                                         </p>
+                                     </div>
+                                 </div>
+                                 <ul style="font-size:0.78rem; color:#555; padding-left:1rem; margin:6px 0; line-height:1.6;">
+                                      <li><strong>Objective:</strong> Extend the 2012 system to two antennae with 3D movement patterns</li>
+                                      <li><strong>Method:</strong> Single ESN predicting both left and right antenna sensor readings simultaneously</li>
+                                      <li><strong>Scenarios tested:</strong> Straight path, curved path, and spiked wheels (simulating walking robot)</li>
+                                      <li><strong>Key result:</strong> 96% success rate distinguishing 53 true touch events from 252 disturbances</li>
+                                      <li><strong>Relevance:</strong> Confirms ESN forward model works across complex movement scenarios</li>
+                                  </ul>
+                                  <a href="docs/HarischandraN_etal_2013.pdf" target="_blank"
+                                      style="display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; color:#17a589; text-decoration:none; font-weight:600; margin-top:4px;"
+                                      onmouseover="this.style.textDecoration='underline'"
+                                      onmouseout="this.style.textDecoration='none'">
+                                      <i class="fas fa-download" style="font-size:0.7rem;"></i> Open PDF
+                                  </a>
+                              </div>
+
+                              <!-- Paper 3 -->
+                              <div style="background:#fff; border:1px solid #dee2e6; border-left:3px solid #8e44ad; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+                                  <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                                      <i class="fas fa-file-pdf" style="color:#e74c3c; font-size:1.1rem; margin-top:2px; flex-shrink:0;"></i>
+                                      <div>
+                                          <p style="font-size:0.8rem; font-weight:700; color:#222; margin:0 0 2px;">
+                                              Gunasekara, Kaldera, Harischandra &amp; Samaranayake (2019) — Instrumentation Journal
+                                          </p>
+                                          <p style="font-size:0.75rem; color:#888; margin:0; font-style:italic;">
+                                              "Distance Estimation and Material Classification of a Compliant Tactile Sensor Using Vibration Modes and SVM"
+                                          </p>
+                                      </div>
+                                  </div>
+                                  <ul style="font-size:0.78rem; color:#555; padding-left:1rem; margin:6px 0; line-height:1.6;">
+                                      <li><strong>Objective:</strong> Improve contact distance estimation and material classification using the same antenna sensor</li>
+                                      <li><strong>Method:</strong> FFT-based dominant frequency analysis + SVM classifier (vs ANN benchmark)</li>
+                                      <li><strong>Key finding:</strong> Vibration mode changes at 80% of antenna length — causes non-linear distance readings near tip</li>
+                                      <li><strong>Hardware:</strong> MPU6050 accelerometer on acrylic tube + Raspberry Pi 3 + Pan-Tilt unit</li>
+                                      <li><strong>Key result:</strong> SVM achieved 99.2% accuracy vs 80.8% for ANN at lower computational cost</li>
+                                      <li><strong>Relevance:</strong> Direct predecessor project — same hardware platform and supervisors</li>
+                                  </ul>
+                                  <a href="docs/Instrumentation_Journal_Authors_Copy_Samaranayake_et_al_2.pdf" target="_blank"
+                                      style="display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; color:#8e44ad; text-decoration:none; font-weight:600; margin-top:4px;"
+                                      onmouseover="this.style.textDecoration='underline'"
+                                      onmouseout="this.style.textDecoration='none'">
+                                      <i class="fas fa-download" style="font-size:0.7rem;"></i> Open PDF
+                                  </a>
+                              </div>
+
+                          </div>
+                          <!-- ===== END DETAIL PANEL ===== -->
+                      </div>
+                  </div>
 
                 <!-- WEEK 2 -->
                 <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.2s" data-status="completed">
@@ -697,5 +806,11 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function toggleDetail(id) {
+            var el = document.getElementById(id);
+            el.style.display = (el.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
