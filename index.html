@@ -538,16 +538,124 @@
 
                 <!-- WEEK 2 -->
                 <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.2s" data-status="completed">
-                    <div class="update-card">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week2-detail')">
                         <div class="update-header">
                             <span class="week-badge">Week 2</span>
-                            <span class="date-badge">Date: TBD</span>
+                            <span class="date-badge">📅 Date: TBD</span>
                         </div>
                         <div class="update-body">
-                            <h6>Literature Review — Part 2</h6>
-                            <p>Deep dive into ego-motion cancellation techniques and bio-inspired algorithms. Summary document drafted.</p>
+                            <h6>Extended Literature Review — IEEE Xplore &amp; ResearchGate</h6>
+                            <p>Sourced and studied 3 additional papers on bio-inspired tactile sensing, CPG motor control, and robotic contour tracing. Key facts marked up for algorithm design.</p>
                             <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                    <i class="fas fa-chevron-down me-1"></i>Click to see details &amp; papers
+                                </small>
+                            </div>
                         </div>
+
+                        <!-- ===== EXPANDED DETAIL PANEL ===== -->
+                        <div id="week2-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+
+                            <!-- What we did -->
+                            <p style="font-size:0.82rem; font-weight:700; color:#0a6ebd; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-clipboard-check me-1"></i>What We Did This Week
+                            </p>
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin-bottom:1rem; line-height:1.7;">
+                                <li>Searched IEEE Xplore and ResearchGate for related work on tactile sensing and bio-inspired algorithms</li>
+                                <li>Identified 3 key papers extending the theoretical foundation of this project</li>
+                                <li>Marked up important facts: CPG control theory, contour tracing, and antenna motor modeling</li>
+                                <li>Connected findings to our project's ego-motion cancellation algorithm design</li>
+                                <li>Started compiling the Literature Review Summary document (Deliverable 1)</li>
+                            </ul>
+
+                            <!-- Paper 4 -->
+                            <div style="background:#fff; border:1px solid #dee2e6; border-left:3px solid #e67e22; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+                                <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                                    <i class="fas fa-file-pdf" style="color:#e74c3c; font-size:1.1rem; margin-top:2px; flex-shrink:0;"></i>
+                                    <div>
+                                        <p style="font-size:0.8rem; font-weight:700; color:#222; margin:0 0 2px;">
+                                            Hoinville, Harischandra, Krause &amp; Dürr (2014) — Living Machines (LNAI 8608)
+                                        </p>
+                                        <p style="font-size:0.75rem; color:#888; margin:0; font-style:italic;">
+                                            "Insect-Inspired Tactile Contour Sampling Using Vibration-Based Robotic Antennae"
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul style="font-size:0.78rem; color:#555; padding-left:1rem; margin:6px 0; line-height:1.6;">
+                                    <li><strong>Objective:</strong> Physically implement the Contour-net model on a real robot using vibration-based antennae</li>
+                                    <li><strong>Method:</strong> CPG-based control with Hopf oscillators; each contact triggers a 180° phase shift causing antenna to "bounce off" surfaces</li>
+                                    <li><strong>Platform:</strong> Two vibration-based antennae mounted on a robotic platform — same type as our project's setup</li>
+                                    <li><strong>Key result:</strong> Successfully traced 3D object contours and localized contact events in 3D space</li>
+                                    <li><strong>Bio-inspiration:</strong> Mimics stick insect (<em>Carausius morosus</em>) antennal searching behavior switching from broad search to local sampling on contact</li>
+                                    <li><strong>Relevance:</strong> Demonstrates the physical platform closest to our project — Pan-Tilt with vibration-based antenna and accelerometer</li>
+                                </ul>
+                                <a href="docs/Research_paper4.pdf" target="_blank"
+                                    style="display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; color:#e67e22; text-decoration:none; font-weight:600; margin-top:4px;"
+                                    onmouseover="this.style.textDecoration='underline'"
+                                    onmouseout="this.style.textDecoration='none'">
+                                    <i class="fas fa-download" style="font-size:0.7rem;"></i> Open PDF
+                                </a>
+                            </div>
+ 
+                            <!-- Paper 5 -->
+                            <div style="background:#fff; border:1px solid #dee2e6; border-left:3px solid #2980b9; border-radius:8px; padding:10px 12px; margin-bottom:10px;">
+                                <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                                    <i class="fas fa-file-pdf" style="color:#e74c3c; font-size:1.1rem; margin-top:2px; flex-shrink:0;"></i>
+                                    <div>
+                                        <p style="font-size:0.8rem; font-weight:700; color:#222; margin:0 0 2px;">
+                                            Harischandra, Krause &amp; Dürr (2015) — Frontiers in Computational Neuroscience
+                                        </p>
+                                        <p style="font-size:0.75rem; color:#888; margin:0; font-style:italic;">
+                                            "Stable phase-shift despite quasi-rhythmic movements: a CPG-driven dynamic model of active tactile exploration in an insect"
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul style="font-size:0.78rem; color:#555; padding-left:1rem; margin:6px 0; line-height:1.6;">
+                                    <li><strong>Objective:</strong> Model the Central Pattern Generator (CPG) driving rhythmic antennal movements of stick insects</li>
+                                    <li><strong>Method:</strong> Two-level CPG — Hopf oscillators for rhythm generation + Pattern Formation Network for joint kinematics (16 Fourier components)</li>
+                                    <li><strong>Key finding:</strong> SP joint must lead HS joint by exactly 10–30° to produce natural elliptical antenna tip trajectory — outside this range, the pattern collapses</li>
+                                    <li><strong>Proprioceptor ablation:</strong> Removing hair field sensors only changes joint amplitude and offset — the phase coupling remains stable (coded into CPG)</li>
+                                    <li><strong>Platform:</strong> 3D skeletal simulation of stick insect head-antennal system using Python + ODE physics engine</li>
+                                    <li><strong>Relevance:</strong> The CPG framework directly informs how our Pan-Tilt unit should move the antenna — bio-inspired oscillatory movement pattern for efficient contact detection</li>
+                                </ul>
+                                <a href="docs/Research_paper5.pdf" target="_blank"
+                                    style="display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; color:#2980b9; text-decoration:none; font-weight:600; margin-top:4px;"
+                                    onmouseover="this.style.textDecoration='underline'"
+                                    onmouseout="this.style.textDecoration='none'">
+                                    <i class="fas fa-download" style="font-size:0.7rem;"></i> Open PDF
+                                </a>
+                            </div>
+
+                            <!-- Paper 6 -->
+                            <div style="background:#fff; border:1px solid #dee2e6; border-left:3px solid #27ae60; border-radius:8px; padding:10px 12px; margin-bottom:6px;">
+                                <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:6px;">
+                                    <i class="fas fa-file-pdf" style="color:#e74c3c; font-size:1.1rem; margin-top:2px; flex-shrink:0;"></i>
+                                    <div>
+                                        <p style="font-size:0.8rem; font-weight:700; color:#222; margin:0 0 2px;">
+                                            Research Paper 6 — Source: IEEE Xplore / ResearchGate
+                                        </p>
+                                        <p style="font-size:0.75rem; color:#888; margin:0; font-style:italic;">
+                                            (Update title here after uploading)
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul style="font-size:0.78rem; color:#555; padding-left:1rem; margin:6px 0; line-height:1.6;">
+                                    <li><strong>Objective:</strong> Add your notes here</li>
+                                    <li><strong>Method:</strong> Add key method here</li>
+                                    <li><strong>Key finding:</strong> Add key result here</li>
+                                    <li><strong>Relevance:</strong> Add how it connects to your project here</li>
+                                </ul>
+                                <a href="docs/Research_paper6.pdf" target="_blank"
+                                    style="display:inline-flex; align-items:center; gap:5px; font-size:0.75rem; color:#27ae60; text-decoration:none; font-weight:600; margin-top:4px;"
+                                    onmouseover="this.style.textDecoration='underline'"
+                                    onmouseout="this.style.textDecoration='none'">
+                                    <i class="fas fa-download" style="font-size:0.7rem;"></i> Open PDF
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- ===== END DETAIL PANEL ===== -->
                     </div>
                 </div>
 
