@@ -107,7 +107,7 @@ Replace placeholder divs in `index.html` with real images:
 | Divyanga D.H.S. | E/21/117 |
 | Kariyawasam N.G.V.K. | E/21/212 |
 
-**Supervisors:** Dr. W.A.N.I. Harischandra, Dr. B.G.L.T. Samaranayake
+**Supervisors:** Dr. B.G.L.T. Samaranayake, Dr. W.A.N.I. Harischandra
 **University:** University of Peradeniya — Faculty of Engineering
 **Email:** e21199@eng.pdn.ac.lk
 
