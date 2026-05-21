@@ -14,7 +14,7 @@ The antenna is mounted on a **Pan-Tilt unit** which is then attached to a **mobi
 
 ## 🌐 Live Portfolio
 
-👉 **[View Portfolio Website](https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/)**
+👉 **[View Portfolio Website](https://jayasundara-jp.github.io/fyp-mechanosensor/)**
 
 *(Replace with your actual GitHub Pages link after deploying)*
 
