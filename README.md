@@ -103,10 +103,13 @@ Replace placeholder divs in `index.html` with real images:
 
 ## 📬 Contact
 
-- **Student:** Your Name — Reg. No: XXXXXXXX
-- **Supervisor:** Supervisor Name — Department of XXX
-- **University:** University of Peradeniya / Your University
-- **Email:** your.email@university.ac.lk
+| Jayasundara J.P. | E/21/199 |
+| Divyanga D.H.S. | E/21/117 |
+| Kariyawasam N.G.V.K. | E/21/212 |
+
+**Supervisors:** Dr. W.A.N.I. Harischandra, Dr. B.G.L.T. Samaranayake
+**University:** University of Peradeniya — Faculty of Engineering
+**Email:** e21199@eng.pdn.ac.lk
 
 ---
 
