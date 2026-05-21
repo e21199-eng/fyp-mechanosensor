@@ -6,9 +6,9 @@
 
 ## 🤖 Project Description
 
-In this project, a **vibration-based artificial robotic antenna** (feeler), inspired by insect antennae, is constructed using an **accelerometer mounted on the tip of a plastic tube**, and is used for detecting contacts.
+In this project, a **vibration-based artificial robotic antenna**, inspired by insect antennae, is constructed using an **accelerometer mounted on the tip of a plastic tube**, and is used for detecting contacts.
 
-The antenna is mounted on a **Pan-Tilt unit** which is then attached to a **mobile robot platform**. The key problem with this type of mechanosensor is **self-sensing due to ego-motion** — vibrations from the robot's own movement interfere with contact detection. The aim is to **cancel the effects of ego-motion** using a **bio-inspired algorithm**.
+The antenna is mounted on a **Pan-Tilt unit** which is then attached to a **mobile robot platform**. The key problem with this type of mechanosensor is **self-sensing due to ego-motion** vibrations from the robot's own movement interfere with contact detection. The aim is to **cancel the effects of ego-motion** using a **bio-inspired algorithm**.
 
 ---
 
