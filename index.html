@@ -713,7 +713,7 @@
                 </div>
 
                 <!-- WEEKS 4–14: Upcoming -->
-                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.4s" data-status="inprogress">
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.4s" data-status="completed">
                     <div class="update-card">
                         <div class="update-header">
                             <span class="week-badge">Week 4</span>
@@ -723,23 +723,38 @@
                             <h6>Hardware Design &amp; Component Mounting Design</h6>
                             <ul style="font-size:0.85rem; color:#555; padding-left:1.1rem; margin:8px 0; line-height:1.8;">
                                 <li>Used recorded robot platform dimensions to design mounting components</li>
-                                <li>Designed mounting brackets to fit the server motors, JETSON NANO and the wheel base</li>
+                                <li>Designed mounting brackets to fit the servo motors, Jetson Nano and the wheel base</li>
                             </ul>
-                            <span class="update-status status-inprogress"><i class="fas fa-spinner me-1"></i>In Progress</span>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.5s" data-status="upcoming">
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.5s" data-status="completed">
                     <div class="update-card">
-                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                        <div class="update-header">
                             <span class="week-badge">Week 5</span>
-                            <span class="date-badge">Date: TBD</span>
+                            <span class="date-badge">📅 Date: TBD</span>
                         </div>
                         <div class="update-body">
-                            <h6>Schematic Completion</h6>
-                            <!--p>Complete PCB schematics and begin design file preparation for fabrication.</p-->
-                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                            <h6>Component Collection, Circuit Design &amp; Hardware Check</h6>
+                            <ul style="font-size:0.85rem; color:#555; padding-left:1.1rem; margin:8px 0; line-height:1.8;">
+                                <li>Collected hardware components — purchased remaining parts from shop</li>
+                                <li>Drew the circuit diagram for the sensor interface system</li>
+                                <li>Tested the MPU6050 accelerometer to verify it works correctly before mounting</li>
+                                <li>Inspected the robot platform to confirm mounting points and connections</li>
+                                <li>
+                                    <strong>Robot Platform — Nexus 4WD Omni-Directional Robot:</strong>
+                                    <ul style="font-size:0.82rem; color:#666; padding-left:1rem; margin-top:4px; line-height:1.8;">
+                                        <li>Uses <strong>omni-directional wheels</strong> — can roll like a normal wheel or slide laterally</li>
+                                        <li>Converts robot from <strong>non-holonomic to holonomic</strong> — gains full 3 degrees of freedom</li>
+                                        <li>Can move <strong>forwards, backwards, sideways and rotate</strong> without changing wheel direction</li>
+                                        <li>Includes <strong>DC motors with encoders</strong>, IO expansion and Arduino-compatible microcontroller</li>
+                                        <li>Highly maneuverable — reaches target positions faster and more efficiently than standard wheeled robots</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
                         </div>
                     </div>
                 </div>
