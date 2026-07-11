@@ -761,18 +761,27 @@
 
                 <!-- WEEKS 4–14: Upcoming -->
                 <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.4s" data-status="completed">
-                    <div class="update-card">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week4-detail')">
                         <div class="update-header">
                             <span class="week-badge">Week 4</span>
                             <span class="date-badge">📅 Date: 24/05/2026</span>
                         </div>
                         <div class="update-body">
                             <h6>Hardware Design &amp; Component Mounting Design</h6>
-                            <ul style="font-size:0.85rem; color:#555; padding-left:1.1rem; margin:8px 0; line-height:1.8;">
+                            <p>Used the recorded robot platform dimensions to design mounting brackets for the servo motors, Jetson Nano, and wheel base.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                    <i class="fas fa-chevron-down me-1"></i>Click to see details
+                                </small>
+                            </div>
+                        </div>
+
+                        <div id="week4-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin:0; line-height:1.7;">
                                 <li>Used recorded robot platform dimensions to design mounting components</li>
                                 <li>Designed mounting brackets to fit the servo motors, Jetson Nano and the wheel base</li>
                             </ul>
-                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
                         </div>
                     </div>
                 </div>
