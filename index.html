@@ -903,16 +903,33 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.2s" data-status="upcoming">
-                    <div class="update-card">
-                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.2s" data-status="completed">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week8-detail')">
+                        <div class="update-header">
                             <span class="week-badge">Week 8</span>
-                            <span class="date-badge">Date: TBD</span>
+                            <span class="date-badge">📅 Date: 21/06/2026</span>
                         </div>
                         <div class="update-body">
-                            <h6>Integration Progress</h6>
-                            <!--p>Mount accelerometer on antenna tip. Begin integration with Pan-Tilt unit. Update to this section coming soon.</p-->
-                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                            <h6>Structural Assembly &amp; Sensor Mounting</h6>
+                            <p>Assembled the 3D-printed structural parts, mounted the antenna probe and electronics on the chassis, and reinforced the sensor mounting for cleaner readings.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                    <i class="fas fa-chevron-down me-1"></i>Click to see details
+                                </small>
+                            </div>
+                        </div>
+
+                        <div id="week8-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+                            <p style="font-size:0.82rem; font-weight:700; color:#0a6ebd; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-clipboard-check me-1"></i>Progress
+                            </p>
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin:0; line-height:1.7;">
+                                <li>Assembled the 3D-printed structural parts and mounted them on the robot chassis</li>
+                                <li>Installed the antenna probe, sensors, and electronic boards securely</li>
+                                <li>Organized the wiring and cable connections for reliable operation</li>
+                                <li>Reinforced the sensor mounting to minimize unwanted vibrations and improve measurement accuracy</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
