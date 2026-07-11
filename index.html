@@ -787,30 +787,42 @@
                 </div>
 
                 <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.5s" data-status="completed">
-                    <div class="update-card">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week5-detail')">
                         <div class="update-header">
                             <span class="week-badge">Week 5</span>
                             <span class="date-badge">📅 Date: 31/05/2026</span>
                         </div>
                         <div class="update-body">
                             <h6>Component Collection, Circuit Design &amp; Hardware Check</h6>
-                            <ul style="font-size:0.85rem; color:#555; padding-left:1.1rem; margin:8px 0; line-height:1.8;">
+                            <p>Collected remaining components, drew the sensor interface circuit diagram, tested the MPU6050 accelerometer, and inspected the robot platform's mounting points.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                    <i class="fas fa-chevron-down me-1"></i>Click to see details
+                                </small>
+                            </div>
+                        </div>
+
+                        <div id="week5-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+                            <p style="font-size:0.82rem; font-weight:700; color:#0a6ebd; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-clipboard-check me-1"></i>What We Did This Week
+                            </p>
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin-bottom:1rem; line-height:1.7;">
                                 <li>Collected hardware components — purchased remaining parts from shop</li>
                                 <li>Drew the circuit diagram for the sensor interface system</li>
                                 <li>Tested the MPU6050 accelerometer to verify it works correctly before mounting</li>
                                 <li>Inspected the robot platform to confirm mounting points and connections</li>
-                                <li>
-                                    <strong>Robot Platform — Nexus 4WD Omni-Directional Robot:</strong>
-                                    <ul style="font-size:0.82rem; color:#666; padding-left:1rem; margin-top:4px; line-height:1.8;">
-                                        <li>Uses <strong>omni-directional wheels</strong> — can roll like a normal wheel or slide laterally</li>
-                                        <li>Converts robot from <strong>non-holonomic to holonomic</strong> — gains full 3 degrees of freedom</li>
-                                        <li>Can move <strong>forwards, backwards, sideways and rotate</strong> without changing wheel direction</li>
-                                        <li>Includes <strong>DC motors with encoders</strong>, IO expansion and Arduino-compatible microcontroller</li>
-                                        <li>Highly maneuverable — reaches target positions faster and more efficiently than standard wheeled robots</li>
-                                    </ul>
-                                </li>
                             </ul>
-                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <p style="font-size:0.82rem; font-weight:700; color:#17a589; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-robot me-1"></i>Robot Platform — Nexus 4WD Omni-Directional Robot
+                            </p>
+                            <ul style="font-size:0.8rem; color:#555; padding-left:1.1rem; margin:0; line-height:1.7;">
+                                <li>Uses omni-directional wheels — can roll like a normal wheel or slide laterally</li>
+                                <li>Converts robot from non-holonomic to holonomic — gains full 3 degrees of freedom</li>
+                                <li>Can move forwards, backwards, sideways and rotate without changing wheel direction</li>
+                                <li>Includes DC motors with encoders, IO expansion and Arduino-compatible microcontroller</li>
+                                <li>Highly maneuverable — reaches target positions faster and more efficiently than standard wheeled robots</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
