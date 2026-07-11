@@ -806,16 +806,40 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.6s" data-status="upcoming">
-                    <div class="update-card">
-                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.6s" data-status="completed">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week6-detail')">
+                        <div class="update-header">
                             <span class="week-badge">Week 6</span>
-                            <span class="date-badge">Date: TBD</span>
+                            <span class="date-badge">📅 Date: 07/06/2026</span>
                         </div>
                         <div class="update-body">
-                            <h6>Coding Framework Start</h6>
-                            <!--p>Begin implementing the signal processing and bio-inspired cancellation algorithm code.</p-->
-                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                            <h6>Coding Framework — Movement &amp; Sensor Sync</h6>
+                            <p>Built the basic program structure to synchronize the robot's movement commands with accelerometer data.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                    <i class="fas fa-chevron-down me-1"></i>Click to see details &amp; photo
+                                </small>
+                            </div>
+                        </div>
+
+                        <div id="week6-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+                            <p style="font-size:0.82rem; font-weight:700; color:#0a6ebd; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-bullseye me-1"></i>Objective
+                            </p>
+                            <p style="font-size:0.82rem; color:#444; margin-bottom:1rem; line-height:1.7;">
+                                Build the basic program structure to synchronize the robot's movement commands with accelerometer data.
+                            </p>
+                            <p style="font-size:0.82rem; font-weight:700; color:#17a589; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-code-branch me-1"></i>Progress
+                            </p>
+                            <p style="font-size:0.82rem; color:#444; margin-bottom:1rem; line-height:1.7;">
+                                Developed the main program logic to track wheel encoder velocities and designed a synchronized data buffering system to organize sensor data for future noise filtering.
+                            </p>
+                            <a href="docs/week6_progress.jpg" target="_blank"
+                                style="display:inline-flex; align-items:center; gap:5px; background:#e8f0fe; color:#0a6ebd; font-size:0.75rem; font-weight:700; padding:5px 10px; border-radius:6px; text-decoration:none;">
+                                <i class="fas fa-image"></i> View Photo
+                            </a>
                         </div>
                     </div>
                 </div>
