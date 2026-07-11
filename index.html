@@ -860,16 +860,45 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.1s" data-status="upcoming">
-                    <div class="update-card">
-                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
+                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.1s" data-status="completed">
+                    <div class="update-card" style="cursor:pointer;" onclick="toggleDetail('week7-detail')">
+                        <div class="update-header">
                             <span class="week-badge">Week 7</span>
-                            <span class="date-badge">Date: TBD</span>
+                            <span class="date-badge">📅 Date: 14/06/2026</span>
                         </div>
                         <div class="update-body">
-                            <h6>Coding + Hardware Assembly</h6>
-                            <!--p>Parallel progress: continue coding framework while starting hardware assembly of antenna prototype.</p-->
-                            <span class="update-status status-upcoming"><i class="fas fa-clock me-1"></i>Upcoming</span>
+                            <h6>MPU6050–Arduino Integration &amp; Servo Motion</h6>
+                            <p>Established I²C communication between Arduino and MPU6050, added continuous servo-driven antenna motion, and mounted the printed brackets on the platform.</p>
+                            <span class="update-status status-completed"><i class="fas fa-check-circle me-1"></i>Completed</span>
+                            <div class="text-end mt-2">
+                                <small style="color:#0a6ebd; font-size:0.78rem;">
+                                    <i class="fas fa-chevron-down me-1"></i>Click to see details
+                                </small>
+                            </div>
+                        </div>
+
+                        <div id="week7-detail" style="display:none; border-top:2px solid #0a6ebd; background:#f8fbff; padding:1rem 1.2rem;">
+                            <p style="font-size:0.82rem; font-weight:700; color:#0a6ebd; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-code-branch me-1"></i>Progress
+                            </p>
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin-bottom:1rem; line-height:1.7;">
+                                <li>Established communication between the Arduino and MPU6050 using the I²C protocol</li>
+                                <li>Configured the MPU6050 to continuously measure three-axis acceleration (Ax, Ay, Az)</li>
+                                <li>Successfully transmitted sensor data to the computer through serial communication</li>
+                                <li>Integrated two servo motors to generate continuous antenna-like motion</li>
+                                <li>Collected accelerometer data while the servos were moving to create synchronized motion and vibration data</li>
+                                <li>Mounted printed brackets on the platform</li>
+                            </ul>
+                            <p style="font-size:0.82rem; font-weight:700; color:#17a589; margin-bottom:6px; text-transform:uppercase; letter-spacing:0.5px;">
+                                <i class="fas fa-cogs me-1"></i>Functions Implemented
+                            </p>
+                            <ul style="font-size:0.82rem; color:#444; padding-left:1.1rem; margin:0; line-height:1.7;">
+                                <li>MPU6050 initialization</li>
+                                <li>I²C communication</li>
+                                <li>Three-axis acceleration measurement</li>
+                                <li>Continuous servo motor control</li>
+                                <li>Serial data transmission (115200 baud)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
