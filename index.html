@@ -348,7 +348,7 @@
                         <p class="small text-muted">Detailed list of all hardware components required, with sources, specifications, and procurement status.</p>
                         <ul style="font-size:0.82rem; color:#555; padding-left:1.1rem; margin:10px 0; line-height:1.8;">
                             <li><i class="fas fa-robot text-primary me-1"></i>4WD Robot Platform</li>
-                            <li><i class="fas fa-microchip text-primary me-1"></i>Jetson Nano</li>
+                            <li><i class="fas fa-microchip text-primary me-1"></i>RASPBERRY Pi</li>
                             <li><i class="fas fa-wave-square text-primary me-1"></i>MPU6050 Accelerometers</li>
                             <li><i class="fas fa-cog text-primary me-1"></i>MG995 Servo Motors</li>
                             <li><i class="fas fa-minus text-primary me-1"></i>Poly-Acrylic Tubes</li>
@@ -433,6 +433,38 @@
                                 onmouseover="this.style.background='#17a589';this.style.color='#fff'"
                                 onmouseout="this.style.background='#e8f9f5';this.style.color='#17a589'">
                                 <i class="fas fa-code"></i> View Code
+                            </a>
+                        </div>
+
+                        <!-- Data Reading -->
+                        <div style="border-left:3px solid #8e44ad; padding-left:10px; margin:8px 0 12px;">
+                            <p style="font-size:0.82rem; font-weight:700; color:#8e44ad; margin-bottom:6px;">
+                                <i class="fas fa-check-circle me-1"></i>Data Reading
+                            </p>
+                            <p style="font-size:0.8rem; color:#555; margin-bottom:8px;">
+                                Code to synchronously read and log accelerometer and motor movement data for model training.
+                            </p>
+                            <a href="docs/read_data.ino" target="_blank"
+                                style="display:inline-flex; align-items:center; gap:5px; background:#f3e8fb; color:#8e44ad; font-size:0.75rem; font-weight:700; padding:5px 10px; border-radius:6px; text-decoration:none;"
+                                onmouseover="this.style.background='#8e44ad';this.style.color='#fff'"
+                                onmouseout="this.style.background='#f3e8fb';this.style.color='#8e44ad'">
+                                <i class="fas fa-code"></i> View on Colab
+                            </a>
+                        </div>
+
+                        <!-- ESN Model -->
+                        <div style="border-left:3px solid #e67e22; padding-left:10px; margin:8px 0 12px;">
+                            <p style="font-size:0.82rem; font-weight:700; color:#e67e22; margin-bottom:6px;">
+                                <i class="fas fa-check-circle me-1"></i>ESN Model
+                            </p>
+                            <p style="font-size:0.8rem; color:#555; margin-bottom:8px;">
+                                Echo State Network implementation used to predict expected sensor readings for ego-motion cancellation.
+                            </p>
+                            <a href="https://colab.research.google.com/drive/1guCraSH6m98zCZfai44IAiscpB1u0_Dr?usp=sharing" target="_blank"
+                                style="display:inline-flex; align-items:center; gap:5px; background:#fdf0e3; color:#e67e22; font-size:0.75rem; font-weight:700; padding:5px 10px; border-radius:6px; text-decoration:none;"
+                                onmouseover="this.style.background='#e67e22';this.style.color='#fff'"
+                                onmouseout="this.style.background='#fdf0e3';this.style.color='#e67e22'">
+                                <i class="fas fa-brain"></i> View on Colab
                             </a>
                         </div>
 
