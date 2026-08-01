@@ -1430,7 +1430,163 @@
                </div>
            </div>
        </div>
+               <!-- WEEK 13 -->
+               <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn"
+                   data-wow-delay="0.6s" data-status="completed">
 
+                   <div class="update-card" style="cursor:pointer;"
+                       onclick="toggleDetail('week13-detail')">
+
+                       <div class="update-header">
+                           <span class="week-badge">Week 13</span>
+                           <span class="date-badge">📅 Date: 26/07/2026</span>
+                       </div>
+
+                       <div class="update-body">
+                           <h6>ESN Training &amp; Initial Touch Detection</h6>
+
+                       <p>
+                           Trained the Echo State Network using the collected data and
+                           performed initial touch detection by analysing the prediction
+                           error.
+                       </p>
+
+                       <span class="update-status status-completed">
+                           <i class="fas fa-check-circle me-1"></i>Completed
+                       </span>
+ 
+                       <div class="text-end mt-2">
+                           <small style="color:#0a6ebd; font-size:0.78rem;">
+                               <i class="fas fa-chevron-down me-1"></i>
+                               Click to see details
+                           </small>
+                       </div>
+                   </div>
+
+                   <!-- Expanded details -->
+                   <div id="week13-detail"
+                       style="display:none; border-top:2px solid #0a6ebd;
+                       background:#f8fbff; padding:1rem 1.2rem;">
+
+                       <p style="font-size:0.82rem; font-weight:700;
+                           color:#0a6ebd; margin-bottom:6px;
+                           text-transform:uppercase; letter-spacing:0.5px;">
+
+                           <i class="fas fa-clipboard-check me-1"></i>Progress
+                       </p>
+
+                       <ul style="font-size:0.82rem; color:#444;
+                           padding-left:1.1rem; margin:0; line-height:1.7;">
+
+                           <li>
+                               Loaded and prepared the synchronized motion and sensor
+                               dataset for ESN training.
+                           </li>
+
+                           <li>
+                               Divided the recorded dataset into training and testing
+                               sections.
+                           </li>
+
+                           <li>
+                               Applied washout samples to remove the initial reservoir
+                               transient response.
+                           </li>
+
+                           <li>
+                               Trained the ESN output layer using ridge regression.
+                           </li>
+
+                           <li>
+                               Used the trained ESN to predict the sensor response
+                               caused by ego-motion.
+                           </li>
+
+                           <li>
+                               Compared the measured sensor signal with the
+                               ESN-predicted signal.
+                           </li>
+
+                           <li>
+                               Calculated the residual signal as the difference between
+                               the actual and predicted sensor outputs.
+                           </li>
+
+                           <li>
+                               Performed initial touch detection by applying a threshold
+                               to the residual signal.
+                           </li>
+ 
+                           <li>
+                               Obtained preliminary touch detection results and
+                               identified areas for further model tuning.
+                           </li>
+                       </ul>
+
+            <!-- Attachments -->
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">
+
+                <a href="docs/predicted_vs_actual.jpeg" target="_blank"
+                    style="display:inline-flex; align-items:center; gap:5px;
+                    background:#e8f0fe; color:#0a6ebd;
+                    font-size:0.75rem; font-weight:700;
+                    padding:5px 10px; border-radius:6px;
+                    text-decoration:none;"
+                    onmouseover="this.style.background='#0a6ebd';
+                    this.style.color='#fff'"
+                    onmouseout="this.style.background='#e8f0fe';
+                    this.style.color='#0a6ebd'">
+
+                    <i class="fas fa-chart-line"></i> Prediction Results
+                </a>
+
+                <a href="docs/residual_signal.jpeg" target="_blank"
+                    style="display:inline-flex; align-items:center; gap:5px;
+                    background:#fdf0e3; color:#e67e22;
+                    font-size:0.75rem; font-weight:700;
+                    padding:5px 10px; border-radius:6px;
+                    text-decoration:none;"
+                    onmouseover="this.style.background='#e67e22';
+                    this.style.color='#fff'"
+                    onmouseout="this.style.background='#fdf0e3';
+                    this.style.color='#e67e22'">
+
+                    <i class="fas fa-wave-square"></i> Residual Signal
+                </a>
+
+                <a href="docs/touch_detection.jpeg" target="_blank"
+                    style="display:inline-flex; align-items:center; gap:5px;
+                    background:#e8f9f5; color:#17a589;
+                    font-size:0.75rem; font-weight:700;
+                    padding:5px 10px; border-radius:6px;
+                    text-decoration:none;"
+                    onmouseover="this.style.background='#17a589';
+                    this.style.color='#fff'"
+                    onmouseout="this.style.background='#e8f9f5';
+                    this.style.color='#17a589'">
+
+                    <i class="fas fa-hand-pointer"></i> Touch Detection
+                </a>
+
+                <a href="https://colab.research.google.com/"
+                    target="_blank"
+                    style="display:inline-flex; align-items:center; gap:5px;
+                    background:#f3e8fb; color:#8e44ad;
+                    font-size:0.75rem; font-weight:700;
+                    padding:5px 10px; border-radius:6px;
+                    text-decoration:none;"
+                    onmouseover="this.style.background='#8e44ad';
+                    this.style.color='#fff'"
+                    onmouseout="this.style.background='#f3e8fb';
+                    this.style.color='#8e44ad'">
+
+                    <i class="fas fa-brain"></i> View Training Notebook
+                </a>
+
+            </div>
+        </div>
+    </div>
+</div>
                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.6s" data-status="upcoming">
                    <div class="update-card">
                        <div class="update-header" style="background: linear-gradient(135deg, #555, #333);">
