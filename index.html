@@ -1277,7 +1277,159 @@
                        </div>
                    </div>
                </div>
+           
+               <!-- WEEK 12 -->
+               <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn"
+                   data-wow-delay="0.5s" data-status="completed">
+
+                   <div class="update-card" style="cursor:pointer;"
+                       onclick="toggleDetail('week12-detail')">
+
+                       <div class="update-header">
+                           <span class="week-badge">Week 12</span>
+                           <span class="date-badge">📅 Date: 19/07/2026</span>
+                       </div>
+
+                       <div class="update-body">
+                           <h6>Data Acquisition for ESN Training</h6>
+
+                       <p>
+                           Collected synchronized servo motion and accelerometer data
+                           from the robotic antenna system to create the ESN training
+                           dataset.
+                       </p>
+
+                       <span class="update-status status-completed">
+                           <i class="fas fa-check-circle me-1"></i>Completed
+                       </span>
+
+                       <div class="text-end mt-2">
+                           <small style="color:#0a6ebd; font-size:0.78rem;">
+                               <i class="fas fa-chevron-down me-1"></i>
+                                   Click to see details
+                           </small>
+                       </div>
+                   </div>
+
+                   <!-- Expanded details -->
+                   <div id="week12-detail"
+                       style="display:none; border-top:2px solid #0a6ebd;
+                       background:#f8fbff; padding:1rem 1.2rem;">
+
+                       <p style="font-size:0.82rem; font-weight:700;
+                           color:#0a6ebd; margin-bottom:6px;
+                           text-transform:uppercase; letter-spacing:0.5px;">
+
+                           <i class="fas fa-clipboard-check me-1"></i>Progress
+                       </p>
+
+                       <ul style="font-size:0.82rem; color:#444;
+                           padding-left:1.1rem; margin:0; line-height:1.7;">
+
+                       <li>
+                           Operated the two servo motors to generate the required
+                           antenna movement pattern.
+                       </li>
+
+                       <li>
+                           Recorded servo position commands together with
+                           accelerometer measurements.
+                       </li>
+
+                       <li>
+                           Collected data from the antenna-tip sensor and the
+                           reference sensor.
+                       </li>
+
+                       <li>
+                           Synchronized all sensor and motion signals using a
+                           common sampling rate.
+                       </li>
+
+                       <li>
+                           Transmitted the recorded data to the computer through
+                           serial communication.
+                       </li>
+
+                       <li>
+                           Stored the collected signals in CSV format for
+                           ESN training and testing.
+                       </li>
+
+                       <li>
+                           Inspected the recorded signals and identified noise,
+                           offsets and irregularities.
+                       </li>
+
+                       <li>
+                           Applied initial preprocessing and low-pass filtering
+                           before model training.
+                       </li>
+                   </ul>
+
+                   <!-- Attachments -->
+                   <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">
+
+                       <a href="docs/data_collection_setup.jpeg" target="_blank"
+                           style="display:inline-flex; align-items:center; gap:5px;
+                           background:#e8f0fe; color:#0a6ebd;
+                           font-size:0.75rem; font-weight:700;
+                           padding:5px 10px; border-radius:6px;
+                           text-decoration:none;"
+                           onmouseover="this.style.background='#0a6ebd';
+                           this.style.color='#fff'"
+                           onmouseout="this.style.background='#e8f0fe';
+                           this.style.color='#0a6ebd'">
+
+                           <i class="fas fa-image"></i> View Setup
+                       </a>
+
+                       <a href="docs/training_dataset.csv" target="_blank"
+                           style="display:inline-flex; align-items:center; gap:5px;
+                           background:#e8f9f5; color:#17a589;
+                           font-size:0.75rem; font-weight:700;
+                           padding:5px 10px; border-radius:6px;
+                           text-decoration:none;"
+                           onmouseover="this.style.background='#17a589';
+                           this.style.color='#fff'"
+                           onmouseout="this.style.background='#e8f9f5';
+                           this.style.color='#17a589'">
+
+                           <i class="fas fa-file-csv"></i> View Dataset
+                       </a>
+
+                       <a href="docs/data_acquisition.ino" target="_blank"
+                           style="display:inline-flex; align-items:center; gap:5px;
+                           background:#f3e8fb; color:#8e44ad;
+                           font-size:0.75rem; font-weight:700;
+                           padding:5px 10px; border-radius:6px;
+                           text-decoration:none;"
+                           onmouseover="this.style.background='#8e44ad';
+                           this.style.color='#fff'"
+                           onmouseout="this.style.background='#f3e8fb';
+                           this.style.color='#8e44ad'">
+
+                           <i class="fas fa-code"></i> View Code
+                       </a>
+
+                       <a href="docs/acquired_signals.jpeg" target="_blank"
+                           style="display:inline-flex; align-items:center; gap:5px;
+                           background:#fdf0e3; color:#e67e22;
+                           font-size:0.75rem; font-weight:700;
+                           padding:5px 10px; border-radius:6px;
+                           text-decoration:none;"
+                           onmouseover="this.style.background='#e67e22';
+                           this.style.color='#fff'"
+                           onmouseout="this.style.background='#fdf0e3';
+                           this.style.color='#e67e22'">
+
+                           <i class="fas fa-chart-line"></i> View Signals
+                       </a>
+
+                   </div>
+               </div>
            </div>
+       </div>
 
                <div class="col-md-6 col-lg-4 update-card-wrapper wow fadeIn" data-wow-delay="0.6s" data-status="upcoming">
                    <div class="update-card">
