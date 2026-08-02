@@ -501,14 +501,174 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
+                <!-- DELIVERABLE 08 — WEEK 12 DATA ACQUISITION -->
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.8s">
                     <div class="deliverable-card">
-                        <div class="deliverable-number">06</div>
-                        <h5><i class="fas fa-chart-line text-primary me-2"></i>Calibration &amp; Sensitivity Report</h5>
-                        <p class="small text-muted">Detailed analysis of sensor calibration results, sensitivity measurements, and hardware validation outcomes.</p>
-                        <span class="badge-week"><i class="fas fa-clock me-1"></i>Week 11</span>
+
+                        <div class="deliverable-number">08</div>
+
+                        <h5>
+                            <i class="fas fa-database text-primary me-2"></i>
+                            Experimental Data Acquisition
+                        </h5>
+
+                        <p class="small text-muted">
+                            Synchronized motion and sensor datasets collected from the robotic
+                            antenna system for ESN training, validation, and initial touch-detection testing.
+                        </p>
+
+                        <!-- Training Dataset Section -->
+                        <div style="border-left:3px solid #17a589;
+                                padding-left:10px;
+                                margin:12px 0;">
+
+                        <p style="font-size:0.82rem;
+                                font-weight:700;
+                                color:#17a589;
+                                margin-bottom:5px;">
+
+                            <i class="fas fa-folder-open me-1"></i>
+                            Training Datasets
+                        </p>
+
+                        <p style="font-size:0.8rem;
+                                color:#555;
+                                margin-bottom:8px;">
+
+                            Normal-motion datasets containing synchronized servo commands,
+                            antenna-tip sensor readings, and reference sensor measurements
+                            used to train the Echo State Network.
+                        </p>
+
+                        <a href="https://github.com/e21199-eng/fyp-mechanosensor/tree/main/docs/datasets/training"
+                            target="_blank"
+                            rel="noopener noreferrer"
+
+                            style="display:inline-flex;
+                                align-items:center;
+                                gap:6px;
+                                background:#e8f9f5;
+                                color:#17a589;
+                                font-size:0.75rem;
+                                font-weight:700;
+                                padding:6px 12px;
+                                border-radius:6px;
+                                text-decoration:none;"
+
+                            onmouseover="this.style.background='#17a589';
+                                         this.style.color='#fff'"
+
+                            onmouseout="this.style.background='#e8f9f5';
+                                        this.style.color='#17a589'">
+
+                            <i class="fas fa-folder-open"></i>
+                            View Training Datasets
+                        </a>
                     </div>
-                </div>
+
+                    <!-- Normal Motion Test Dataset Section -->
+                    <div style="border-left:3px solid #0a6ebd;
+                                padding-left:10px;
+                                margin:12px 0;">
+
+                        <p style="font-size:0.82rem;
+                      font-weight:700;
+                      color:#0a6ebd;
+                      margin-bottom:5px;">
+
+                <i class="fas fa-wave-square me-1"></i>
+                Normal-Motion Test Datasets
+            </p>
+
+            <p style="font-size:0.8rem;
+                      color:#555;
+                      margin-bottom:8px;">
+
+                Unseen normal-motion datasets used to evaluate how accurately
+                the trained ESN predicts sensor responses caused by ego-motion.
+            </p>
+
+            <a href="https://github.com/e21199-eng/fyp-mechanosensor/tree/main/docs/datasets/testing/normal_motion"
+                target="_blank"
+                rel="noopener noreferrer"
+
+                style="display:inline-flex;
+                       align-items:center;
+                       gap:6px;
+                       background:#e8f0fe;
+                       color:#0a6ebd;
+                       font-size:0.75rem;
+                       font-weight:700;
+                       padding:6px 12px;
+                       border-radius:6px;
+                       text-decoration:none;"
+
+                onmouseover="this.style.background='#0a6ebd';
+                             this.style.color='#fff'"
+
+                onmouseout="this.style.background='#e8f0fe';
+                            this.style.color='#0a6ebd'">
+
+                <i class="fas fa-folder-open"></i>
+                View Normal-Motion Data
+            </a>
+        </div>
+
+        <!-- Touch Event Test Dataset Section -->
+        <div style="border-left:3px solid #8e44ad;
+                    padding-left:10px;
+                    margin:12px 0;">
+
+            <p style="font-size:0.82rem;
+                      font-weight:700;
+                      color:#8e44ad;
+                      margin-bottom:5px;">
+
+                <i class="fas fa-hand-pointer me-1"></i>
+                Touch-Event Test Datasets
+            </p>
+
+            <p style="font-size:0.8rem;
+                      color:#555;
+                      margin-bottom:8px;">
+
+                Experimental datasets containing external antenna contacts
+                during motion, used for initial touch-detection validation.
+            </p>
+
+            <a href="https://github.com/e21199-eng/fyp-mechanosensor/tree/main/docs/datasets/testing/touch_events"
+                target="_blank"
+                rel="noopener noreferrer"
+
+                style="display:inline-flex;
+                       align-items:center;
+                       gap:6px;
+                       background:#f3e8fb;
+                       color:#8e44ad;
+                       font-size:0.75rem;
+                       font-weight:700;
+                       padding:6px 12px;
+                       border-radius:6px;
+                       text-decoration:none;"
+
+                onmouseover="this.style.background='#8e44ad';
+                             this.style.color='#fff'"
+
+                onmouseout="this.style.background='#f3e8fb';
+                            this.style.color='#8e44ad'">
+
+                <i class="fas fa-folder-open"></i>
+                View Touch-Event Data
+            </a>
+        </div>
+
+        <span class="badge-week">
+            <i class="fas fa-clock me-1"></i>
+            Week 12
+        </span>
+
+    </div>
+</div>
 
                 <div class="col-md-6 offset-md-3 col-lg-4 offset-lg-4 wow fadeIn" data-wow-delay="0.7s">
                     <div class="deliverable-card">
